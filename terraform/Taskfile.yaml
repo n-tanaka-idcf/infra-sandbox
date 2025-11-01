@@ -1,0 +1,16 @@
+---
+version: "3"
+
+tasks:
+  default:
+    desc: Displays all available tasks.
+    cmds:
+      - task --list-all --sort none
+
+  environment:check:
+    desc: Check required tools are available for this environment.
+    cmds:
+      - actionlint --version
+      - jq --version
+      - terraform --version
+      - tflint --version
